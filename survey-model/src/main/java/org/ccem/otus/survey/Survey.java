@@ -1,5 +1,7 @@
 package org.ccem.otus.survey;
 
+import java.util.Date;
+
 import org.ccem.otus.template.Template;
 import org.ccem.otus.template.item.SurveyItem;
 import org.ccem.otus.template.utils.adapters.SurveyItemAdapter;
@@ -12,8 +14,8 @@ public class Survey {
 	public Template template;
 	
 	public String sender;
-	public String sendingDate;
-	public String templateType;
+	public Date sendingDate;
+	public SurveyTemplateType templateType;
 	
 	public static String serialize(Survey survey) {
 		GsonBuilder builder = new GsonBuilder();
