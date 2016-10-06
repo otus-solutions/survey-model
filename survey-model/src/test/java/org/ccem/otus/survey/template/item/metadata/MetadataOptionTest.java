@@ -59,7 +59,7 @@ public class MetadataOptionTest {
 
 	@Test
 	public void should_parse_correctly_value_attribute() {
-		assertEquals("1", metadataOption.value);
+		assertEquals(Integer.valueOf("1"), metadataOption.value);
 	}
 
 	@Test

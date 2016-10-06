@@ -7,7 +7,7 @@ public class MetadataOption {
 	public String extents;
 	public String objectType;
 	public String dataType;
-	public String value;
+	public Integer value;
 	public Label label;
 
 }
