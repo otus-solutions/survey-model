@@ -20,6 +20,7 @@ public class MetadataOptionTest {
 				+ "\"objectType\": \"MetadataAnswer\","
 				+ "\"dataType\": \"Integer\","
 				+ "\"value\": 1,"
+				+ "\"extractionValue\": \".anyValue\","
 				+ "\"label\": "
 					+ "{\"ptBR\": "
 						+ "{\"extends\": \"StudioObject\","
@@ -60,6 +61,11 @@ public class MetadataOptionTest {
 	@Test
 	public void should_parse_correctly_value_attribute() {
 		assertEquals(Integer.valueOf("1"), metadataOption.value);
+	}
+	
+	@Test
+	public void should_parse_correctly_extraction_value_attribute() {
+		assertEquals(".anyValue", metadataOption.extractionValue);
 	}
 
 	@Test

@@ -22,6 +22,7 @@ public class RadioOptionTest {
 				+ "{\"extents\": \"StudioObject\","
 				+ "\"objectType\": \"AnswerOption\"," 
 				+ "\"value\": 1,"
+				+ "\"extractionValue\": \"1\","
 				+ "\"dataType\": \"Integer\","
 				+ "\"label\": {}}";
 	}
@@ -33,6 +34,7 @@ public class RadioOptionTest {
 		assertEquals("StudioObject", radioOption.extents);
 		assertEquals("AnswerOption", radioOption.objectType);
 		assertEquals(new Integer(1), radioOption.value);
+		assertEquals("1", radioOption.extractionValue);
 		assertEquals("Integer", radioOption.dataType);
 		
 		assertTrue(radioOption.label instanceof Label);

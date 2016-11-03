@@ -8,6 +8,7 @@ public class MetadataOption {
 	public String objectType;
 	public String dataType;
 	public Integer value;
+	public String extractionValue;
 	public Label label;
 
 }

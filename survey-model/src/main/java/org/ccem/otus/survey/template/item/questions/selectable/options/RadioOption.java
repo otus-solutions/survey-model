@@ -9,5 +9,6 @@ public class RadioOption {
 	public String dataType;
 	public Label label;
 	public Integer value;
+	public String extractionValue;
 
 }
