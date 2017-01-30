@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.ccem.otus.survey.template.SurveyTemplate;
 import org.ccem.otus.survey.template.identity.Identity;
 import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
@@ -18,7 +17,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.google.gson.Gson;
-import org.powermock.api.mockito.PowerMockito;
 
 public class SurveyTemplateTest {
 	private SurveyTemplate survey;

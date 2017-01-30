@@ -16,7 +16,7 @@ public class MetadataOptionTest {
 	
 	@Before
 	public void setUp() {
-		String json = "{\"extents\": \"StudioObject\","
+		String json = "{\"extends\": \"StudioObject\","
 				+ "\"objectType\": \"MetadataAnswer\","
 				+ "\"dataType\": \"Integer\","
 				+ "\"value\": 1,"
