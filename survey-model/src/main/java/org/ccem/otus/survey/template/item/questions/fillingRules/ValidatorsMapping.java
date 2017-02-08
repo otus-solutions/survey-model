@@ -1,5 +1,6 @@
 package org.ccem.otus.survey.template.item.questions.fillingRules;
 
+import org.ccem.otus.survey.template.item.questions.fillingRules.validators.Accept;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.Mandatory;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.calendar.FutureDate;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.calendar.MaxDate;
@@ -25,7 +26,8 @@ import org.ccem.otus.survey.template.item.questions.fillingRules.validators.time
 public enum ValidatorsMapping {
 	
 	Mandatory(Mandatory.class, "mandatory"),
-	
+	Accept(Accept.class, "accept"),
+
 	/* CalendarQuestion */
 	PAST_DATE(PastDate.class, "pastDate"),
 	FUTURE_DATE(FutureDate.class, "futureDate"),
