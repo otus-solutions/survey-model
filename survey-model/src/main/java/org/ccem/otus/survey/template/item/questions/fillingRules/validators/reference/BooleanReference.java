@@ -3,5 +3,6 @@ package org.ccem.otus.survey.template.item.questions.fillingRules.validators.ref
 public class BooleanReference {
 
 	public boolean reference;
+	public boolean canBeIgnored;
 	
 }
