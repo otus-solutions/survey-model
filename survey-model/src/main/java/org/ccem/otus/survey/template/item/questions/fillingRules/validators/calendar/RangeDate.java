@@ -1,10 +1,10 @@
 package org.ccem.otus.survey.template.item.questions.fillingRules.validators.calendar;
 
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.generic.GenericValidator;
-import org.ccem.otus.survey.template.item.questions.fillingRules.validators.reference.RangeDateReference;
+import org.ccem.otus.survey.template.item.questions.fillingRules.validators.reference.RangeImmutableDateReference;
 
 public class RangeDate extends GenericValidator {
 	
-	public RangeDateReference data;
+	public RangeImmutableDateReference data;
 
 }

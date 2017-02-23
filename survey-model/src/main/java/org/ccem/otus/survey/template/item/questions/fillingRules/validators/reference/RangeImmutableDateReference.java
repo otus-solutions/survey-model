@@ -1,6 +1,8 @@
 package org.ccem.otus.survey.template.item.questions.fillingRules.validators.reference;
 
-public class RangeDateReference {
+import org.ccem.otus.survey.template.utils.date.ImmutableDate;
+
+public class RangeImmutableDateReference {
 
 	public RangeReferenceDto reference;
 	public boolean canBeIgnored;
@@ -8,8 +10,8 @@ public class RangeDateReference {
 	// Inner class
 	public class RangeReferenceDto {
 
-		public String initial;
-		public String end;
+		public ImmutableDate initial;
+		public ImmutableDate end;
 
 	}
 

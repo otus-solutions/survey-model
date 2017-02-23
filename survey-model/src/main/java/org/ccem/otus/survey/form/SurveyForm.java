@@ -1,31 +1,20 @@
 package org.ccem.otus.survey.form;
 
-import java.util.Date;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 
 import org.ccem.otus.survey.template.SurveyTemplate;
-import org.ccem.otus.survey.template.item.SurveyItem;
-import org.ccem.otus.survey.template.item.questions.fillingRules.Options;
-import org.ccem.otus.survey.template.utils.adapters.DateAdapter;
-import org.ccem.otus.survey.template.utils.adapters.OptionsAdapter;
-import org.ccem.otus.survey.template.utils.adapters.SurveyItemAdapter;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-/**
- * @author fagner
- *
- */
-/**
- * @author fagner
- *
- */
 public class SurveyForm {
 
 	private static final String SURVEY_FORM = "SurveyForm";
 	private String sender;
-	private Date sendingDate;
+	private LocalDateTime sendingDate;
 	private String objectType;
 	private SurveyFormType surveyFormType;
 	private SurveyTemplate surveyTemplate;
@@ -33,13 +22,17 @@ public class SurveyForm {
 	public SurveyForm(SurveyTemplate surveyTemplate, String userEmail) {
 		this.surveyTemplate = surveyTemplate;
 		this.sender = userEmail;
-		this.sendingDate = new Date();
+		this.sendingDate = LocalDateTime.ofInstant(Instant.now(), ZoneId.of("UTC"));
 		this.surveyFormType = SurveyFormType.FORM_INTERVIEW;
 		this.objectType = SURVEY_FORM;
 	}
 
 	public SurveyTemplate getSurveyTemplate() {
 		return surveyTemplate;
+	}
+
+	public LocalDateTime getSendingDate() {
+		return sendingDate;
 	}
 
 	public String getObjectType() {
@@ -52,10 +45,6 @@ public class SurveyForm {
 
 	public void setSurveyTemplateType(SurveyFormType surveyTemplateType) {
 		this.surveyFormType = surveyTemplateType;
-	}
-
-	public Date getSendingDate() {
-		return sendingDate;
 	}
 
 	public String getSender() {
@@ -77,18 +66,11 @@ public class SurveyForm {
 	}
 
 	/**
-	 * @return a GsonBuilder instance with SurveyItemAdapter, DateAdapter and
-	 *         OptionsAdapter registered and also disableHtmlEscaping option.
+	 * @return a GsonBuilder instance of SurveyTemplate.class
+	 * @see SurveyTemplate.getGsonBuilder();
 	 */
 	public static GsonBuilder getGsonBuilder() {
-		GsonBuilder builder = new GsonBuilder();
-
-		builder.registerTypeAdapter(SurveyItem.class, new SurveyItemAdapter());
-		builder.registerTypeAdapter(Date.class, new DateAdapter());
-		builder.registerTypeAdapter(Options.class, new OptionsAdapter());
-		builder.disableHtmlEscaping();
-
-		return builder;
+		return SurveyTemplate.getGsonBuilder();
 	}
 
 }

@@ -8,14 +8,16 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 
 public class FutureDateTest {
-	
+
 	private FutureDate futureDate;
+	private JsonObject json;
 
 	@Before
 	public void setUp() {
-		String json = "{\"extends\": \"StudioObject\",\"objectType\": \"Rule\",\"validatorType\": \"futureDate\",\"data\": {\"reference\": true}}";
+		json = mockJson();
 
 		futureDate = new Gson().fromJson(json, FutureDate.class);
 	}
@@ -26,6 +28,20 @@ public class FutureDateTest {
 		assertEquals("Rule", futureDate.objectType);
 		assertEquals("futureDate", futureDate.validatorType);
 		assertTrue(futureDate.data.reference);
+	}
+
+	private JsonObject mockJson() {
+		json = new JsonObject();
+		
+		JsonObject booleanReference = new JsonObject();
+		booleanReference.addProperty("reference", true);
+
+		json.addProperty("extends", "StudioObject");
+		json.addProperty("objectType", "Rule");
+		json.addProperty("validatorType", "futureDate");
+		json.add("data", booleanReference);
+		
+		return json;
 	}
 
 }
