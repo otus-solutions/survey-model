@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.ccem.otus.survey.datasource.DataSourceDefinition;
 import org.ccem.otus.survey.template.identity.Identity;
 import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.questions.fillingRules.Options;
@@ -28,6 +29,7 @@ public class SurveyTemplate {
 	public String objectType;
 	public String oid;
 	public Identity identity;
+	public List<DataSourceDefinition> dataSources;
 	public MetaInfo metainfo;
 	public List<SurveyItem> itemContainer;
 	public List<Navigation> navigationList;
