@@ -67,7 +67,7 @@ public class SurveyForm {
 
 	/**
 	 * @return a GsonBuilder instance of SurveyTemplate.class
-	 * @see SurveyTemplate.getGsonBuilder();
+	 * {@link org.ccem.otus.survey.template.SurveyTemplate#getGsonBuilder()}
 	 */
 	public static GsonBuilder getGsonBuilder() {
 		return SurveyTemplate.getGsonBuilder();
