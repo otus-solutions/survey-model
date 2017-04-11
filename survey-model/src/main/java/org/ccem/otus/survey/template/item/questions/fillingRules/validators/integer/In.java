@@ -14,8 +14,8 @@ public class In extends GenericValidator {
 		// Inner class
 		public class RangeInReference {
 			
-			public Integer initial;
-			public Integer end;
+			public Double initial;
+			public Double end;
 		}
 
 	}

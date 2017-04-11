@@ -24,7 +24,7 @@ public class PrecisionTest {
 		assertEquals("StudioObject", precision.extents);
 		assertEquals("Rule", precision.objectType);
 		assertEquals("precision", precision.validatorType);
-		assertEquals(Integer.valueOf("1"), precision.data.reference);
+		assertEquals(Double.valueOf("1.0"), precision.data.reference);
 	}
 
 }

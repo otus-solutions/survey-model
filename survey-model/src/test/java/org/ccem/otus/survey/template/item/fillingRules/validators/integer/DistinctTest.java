@@ -24,7 +24,7 @@ public class DistinctTest {
 		assertEquals("StudioObject", distinct.extents);
 		assertEquals("Rule", distinct.objectType);
 		assertEquals("distinct", distinct.validatorType);
-		assertEquals(Integer.valueOf("1"), distinct.data.reference);
+		assertEquals(Double.valueOf("1.0"), distinct.data.reference);
 	}
 
 }

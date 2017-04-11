@@ -24,7 +24,7 @@ public class ScaleTest {
 		assertEquals("StudioObject", scale.extents);
 		assertEquals("Rule", scale.objectType);
 		assertEquals("scale", scale.validatorType);
-		assertEquals(Integer.valueOf("2"), scale.data.reference);
+		assertEquals(Double.valueOf("2.0"), scale.data.reference);
 	}
 
 
