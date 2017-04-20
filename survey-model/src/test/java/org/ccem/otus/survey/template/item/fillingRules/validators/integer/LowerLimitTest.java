@@ -24,7 +24,7 @@ public class LowerLimitTest {
 		assertEquals("StudioObject", lowerLimit.extents);
 		assertEquals("Rule", lowerLimit.objectType);
 		assertEquals("lowerLimit", lowerLimit.validatorType);
-		assertEquals(Integer.valueOf("1"), lowerLimit.data.reference);
+		assertEquals(Double.valueOf("1.0"), lowerLimit.data.reference);
 	}
 
 }

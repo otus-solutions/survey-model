@@ -3,6 +3,7 @@ package org.ccem.otus.survey.template.enums;
 import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.miscellaneous.ImageItem;
 import org.ccem.otus.survey.template.item.miscellaneous.TextItem;
+import org.ccem.otus.survey.template.item.questions.AutocompleteQuestion;
 import org.ccem.otus.survey.template.item.questions.CalendarQuestion;
 import org.ccem.otus.survey.template.item.questions.EmailQuestion;
 import org.ccem.otus.survey.template.item.questions.PhoneQuestion;
@@ -24,6 +25,7 @@ public enum SurveyItemMapping {
 	EMAIL_QUESTION(EmailQuestion.class, "EmailQuestion"),
 	TIME_QUESTION(TimeQuestion.class, "TimeQuestion"),
 	PHONE_QUESTION(PhoneQuestion.class, "PhoneQuestion"),
+	AUTOCOMPLETE_QUESTION(AutocompleteQuestion.class, "AutocompleteQuestion"),
 	
 	TEXT_ITEM(TextItem.class, "TextItem"),
 	IMAGE_ITEM(ImageItem.class, "ImageItem");

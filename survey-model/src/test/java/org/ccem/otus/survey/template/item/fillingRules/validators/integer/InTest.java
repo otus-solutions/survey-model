@@ -24,8 +24,8 @@ public class InTest {
 		assertEquals("StudioObject", in.extents);
 		assertEquals("Rule", in.objectType);
 		assertEquals("in", in.validatorType);
-		assertEquals(Integer.valueOf("1"), in.data.reference.initial);
-		assertEquals(Integer.valueOf("11"), in.data.reference.end);
+		assertEquals(Double.valueOf("1.0"), in.data.reference.initial);
+		assertEquals(Double.valueOf("11.0"), in.data.reference.end);
 	}
 
 }

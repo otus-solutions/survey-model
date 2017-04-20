@@ -24,7 +24,7 @@ public class UpperLimitTest {
 		assertEquals("StudioObject", upperLimit.extents);
 		assertEquals("Rule", upperLimit.objectType);
 		assertEquals("upperLimit", upperLimit.validatorType);
-		assertEquals(Integer.valueOf("1"), upperLimit.data.reference);
+		assertEquals(Double.valueOf("1.0"), upperLimit.data.reference);
 	}
 
 }
