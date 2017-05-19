@@ -6,6 +6,7 @@ import org.ccem.otus.survey.template.item.miscellaneous.TextItem;
 import org.ccem.otus.survey.template.item.questions.AutocompleteQuestion;
 import org.ccem.otus.survey.template.item.questions.CalendarQuestion;
 import org.ccem.otus.survey.template.item.questions.EmailQuestion;
+import org.ccem.otus.survey.template.item.questions.FileUploadQuestion;
 import org.ccem.otus.survey.template.item.questions.PhoneQuestion;
 import org.ccem.otus.survey.template.item.questions.TextQuestion;
 import org.ccem.otus.survey.template.item.questions.TimeQuestion;
@@ -26,6 +27,7 @@ public enum SurveyItemMapping {
 	TIME_QUESTION(TimeQuestion.class, "TimeQuestion"),
 	PHONE_QUESTION(PhoneQuestion.class, "PhoneQuestion"),
 	AUTOCOMPLETE_QUESTION(AutocompleteQuestion.class, "AutocompleteQuestion"),
+	FILE_UPLOAD_QUESTION(FileUploadQuestion.class, "FileUploadQuestion"),
 	
 	TEXT_ITEM(TextItem.class, "TextItem"),
 	IMAGE_ITEM(ImageItem.class, "ImageItem");
