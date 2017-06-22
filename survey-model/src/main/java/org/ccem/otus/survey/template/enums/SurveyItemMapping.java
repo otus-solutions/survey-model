@@ -10,6 +10,7 @@ import org.ccem.otus.survey.template.item.questions.FileUploadQuestion;
 import org.ccem.otus.survey.template.item.questions.PhoneQuestion;
 import org.ccem.otus.survey.template.item.questions.TextQuestion;
 import org.ccem.otus.survey.template.item.questions.TimeQuestion;
+import org.ccem.otus.survey.template.item.questions.grid.GridTextQuestion;
 import org.ccem.otus.survey.template.item.questions.numeric.DecimalQuestion;
 import org.ccem.otus.survey.template.item.questions.numeric.IntegerQuestion;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
@@ -28,7 +29,8 @@ public enum SurveyItemMapping {
 	PHONE_QUESTION(PhoneQuestion.class, "PhoneQuestion"),
 	AUTOCOMPLETE_QUESTION(AutocompleteQuestion.class, "AutocompleteQuestion"),
 	FILE_UPLOAD_QUESTION(FileUploadQuestion.class, "FileUploadQuestion"),
-	
+	GRID_TEXT_QUESTION(GridTextQuestion.class, "GridTextQuestion"),
+		
 	TEXT_ITEM(TextItem.class, "TextItem"),
 	IMAGE_ITEM(ImageItem.class, "ImageItem");
 	
