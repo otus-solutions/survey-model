@@ -1,4 +1,4 @@
-package org.ccem.otus.survey.template.item.questions.grid;
+package org.ccem.otus.survey.template.item.questions.grid.text;
 
 import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.label.Label;
