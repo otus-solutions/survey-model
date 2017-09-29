@@ -1,5 +1,6 @@
 package org.ccem.otus.survey.template.item.questions.selectable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.ccem.otus.survey.template.item.questions.Question;
@@ -8,5 +9,12 @@ import org.ccem.otus.survey.template.item.questions.selectable.options.CheckboxO
 public class CheckboxQuestion extends Question {
 	
 	public List<CheckboxOption> options;
-	
+
+	@Override
+	public List<String> getAllIDs(){
+		List<String> ids = new ArrayList<>();
+		final String customID = super.customID;
+		options.forEach(checkboxOption -> ids.add(customID + "." + checkboxOption.customOptionID));
+		return ids;
+	}
 }

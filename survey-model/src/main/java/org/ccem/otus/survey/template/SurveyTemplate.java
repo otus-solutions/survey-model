@@ -45,9 +45,16 @@ public class SurveyTemplate {
 	}
 
 	public Set<String> getCustomIds() {
+		// TODO: 28/09/17 incluir questões de grid nessa lista! Utilizar método getAllIDs de SurveyItem
 		Set<String> customIds = new HashSet<>();
 		customIds.addAll(getCustomIdItems());
 		customIds.addAll(getCustomIdOptions());
+		return customIds;
+	}
+
+	public Set<String> getOrderedCustomIDs(){
+		Set<String> customIds = new HashSet<>();
+		itemContainer.forEach(surveyItem -> customIds.addAll(surveyItem.getAllIDs()));
 		return customIds;
 	}
 

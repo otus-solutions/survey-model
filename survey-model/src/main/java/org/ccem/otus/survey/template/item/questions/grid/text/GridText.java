@@ -1,9 +1,9 @@
 package org.ccem.otus.survey.template.item.questions.grid.text;
 
-import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.label.Label;
+import org.ccem.otus.survey.template.item.questions.Question;
 
-public class GridText extends SurveyItem {
+public class GridText extends Question {
 
 	public Label label;
 	public LayoutGridText layout;
