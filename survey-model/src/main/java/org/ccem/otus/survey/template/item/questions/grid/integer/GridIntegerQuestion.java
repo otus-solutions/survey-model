@@ -10,11 +10,12 @@ public class GridIntegerQuestion extends Question {
 	public List<GridIntegerLine> lines;
 
 	@Override
-	public List<String> getAllIDs(){
+	public List<String> getOptionsIDs(){
 		List<String> ids = new ArrayList<>();
 		final String customID = super.customID;
+		ids.add(customID);
 		lines.forEach(gridIntegerLine -> {
-			gridIntegerLine.gridIntegerList.forEach(gridInteger -> ids.add(customID + "." + gridInteger.label));
+			gridIntegerLine.gridIntegerList.forEach(gridInteger -> ids.add(gridInteger.customID));
 		});
 		return ids;
 	}

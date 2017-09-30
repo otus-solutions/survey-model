@@ -11,10 +11,11 @@ public class CheckboxQuestion extends Question {
 	public List<CheckboxOption> options;
 
 	@Override
-	public List<String> getAllIDs(){
+	public List<String> getOptionsIDs(){
 		List<String> ids = new ArrayList<>();
 		final String customID = super.customID;
-		options.forEach(checkboxOption -> ids.add(customID + "." + checkboxOption.customOptionID));
+		ids.add(customID);
+		options.forEach(checkboxOption -> ids.add(checkboxOption.customOptionID));
 		return ids;
 	}
 }

@@ -11,7 +11,7 @@ public class TextItem extends SurveyItem {
 	public Label value;
 
 	@Override
-	public List<String> getAllIDs(){
+	public List<String> getOptionsIDs(){
 		List<String> ids = new ArrayList<>();
 		return ids;
 	}

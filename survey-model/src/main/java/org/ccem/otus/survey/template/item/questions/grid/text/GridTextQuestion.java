@@ -10,13 +10,13 @@ public class GridTextQuestion extends Question {
 	public List<GridTextLine> lines;
 
 	@Override
-	public List<String> getAllIDs(){
+	public List<String> getOptionsIDs(){
 		List<String> ids = new ArrayList<>();
 		final String customID = super.customID;
+		ids.add(customID);
 		lines.forEach(gridTextLine -> {
-			gridTextLine.gridTextList.forEach(gridText -> ids.add(customID + "." + gridText.label));
+			gridTextLine.gridTextList.forEach(gridText -> ids.add(gridText.customID));
 		});
 		return ids;
 	}
 }
-	
