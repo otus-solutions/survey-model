@@ -11,24 +11,16 @@ public class SurveyItem {
 	public String customID;
 	public String dataType;
 
-	public List<String> getOptionsIDs(){
+	public List<String> getExtractionIDs(){
 		List<String> ids = new ArrayList<>();
+		ids.add(this.customID);
 		return ids;
 	}
 
-	public List<String> getAllIDs(){
+	// TODO: 02/10/17 refactor 
+	public List<String> getItemIDs(){
 		List<String> ids = new ArrayList<>();
-
-		ids.addAll(getOptionsIDs());
-		ids.addAll(getQuestionIDs());
-
-		return ids;
-	}
-
-	private List<String> getQuestionIDs(){
-		List<String> ids = new ArrayList<>();
-		ids.add(customID + "_metadata");
-		ids.add(customID + "_comment");
+		ids.addAll(getExtractionIDs());
 		return ids;
 	}
 

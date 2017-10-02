@@ -10,13 +10,9 @@ public class GridIntegerQuestion extends Question {
 	public List<GridIntegerLine> lines;
 
 	@Override
-	public List<String> getOptionsIDs(){
+	public List<String> getExtractionIDs(){
 		List<String> ids = new ArrayList<>();
-		final String customID = super.customID;
-		ids.add(customID);
-		lines.forEach(gridIntegerLine -> {
-			gridIntegerLine.gridIntegerList.forEach(gridInteger -> ids.add(gridInteger.customID));
-		});
+		lines.forEach(gridIntegerLine -> gridIntegerLine.gridIntegerList.forEach(gridInteger -> ids.add(gridInteger.customID)));
 		return ids;
 	}
 }

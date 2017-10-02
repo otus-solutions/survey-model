@@ -12,7 +12,7 @@ public class ImageItem extends SurveyItem {
 	public Label footer;
 
 	@Override
-	public List<String> getOptionsIDs(){
+	public List<String> getExtractionIDs(){
 		List<String> ids = new ArrayList<>();
 		return ids;
 	}

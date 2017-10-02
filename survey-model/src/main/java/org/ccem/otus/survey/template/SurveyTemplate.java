@@ -45,16 +45,17 @@ public class SurveyTemplate {
 	}
 
 	public Set<String> getCustomIds() {
-		// TODO: 28/09/17 incluir questões de grid nessa lista! Utilizar método getOptionsIDs de SurveyItem
+		// TODO: 28/09/17 incluir questões de grid nessa lista! Utilizar método getExtractionIDs de SurveyItem
 		Set<String> customIds = new HashSet<>();
 		customIds.addAll(getCustomIdItems());
 		customIds.addAll(getCustomIdOptions());
 		return customIds;
 	}
 
+	// TODO: 02/10/17 review if it will be used
 	public Set<String> getOrderedCustomIDs(){
 		Set<String> customIds = new HashSet<>();
-		itemContainer.forEach(surveyItem -> customIds.addAll(surveyItem.getAllIDs()));
+		itemContainer.forEach(surveyItem -> customIds.addAll(surveyItem.getItemIDs()));
 		return customIds;
 	}
 
