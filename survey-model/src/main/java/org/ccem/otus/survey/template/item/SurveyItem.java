@@ -17,7 +17,15 @@ public class SurveyItem {
 		return ids;
 	}
 
-	// TODO: 02/10/17 refactor 
+	public String getTemplateID() {
+		return templateID;
+	}
+
+	public String getCustomID() {
+		return customID;
+	}
+
+	// TODO: 02/10/17 refactor
 	public List<String> getItemIDs(){
 		List<String> ids = new ArrayList<>();
 		ids.addAll(getExtractionIDs());
