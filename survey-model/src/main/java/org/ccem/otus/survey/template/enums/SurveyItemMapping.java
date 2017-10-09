@@ -67,5 +67,12 @@ public enum SurveyItemMapping {
 		
 		return aux;
 	}
+	
+	public static boolean isQuestion(String objectType) {
+		if(objectType.equals(TEXT_ITEM) || objectType.equals(IMAGE_ITEM))
+			return false;
+		else
+			return true;
+	}
 
 }
