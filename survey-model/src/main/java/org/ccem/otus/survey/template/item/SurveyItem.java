@@ -3,8 +3,6 @@ package org.ccem.otus.survey.template.item;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.ccem.otus.survey.template.enums.SurveyItemMapping;
-
 public class SurveyItem {
 
 	public String extents;
@@ -24,10 +22,6 @@ public class SurveyItem {
 		List<String> ids = new ArrayList<>();
 		ids.addAll(getExtractionIDs());
 		return ids;
-	}
-
-	public boolean isQuestion() {
-		return SurveyItemMapping.isQuestion(objectType);
 	}
 
 	public String getTemplateID() {
