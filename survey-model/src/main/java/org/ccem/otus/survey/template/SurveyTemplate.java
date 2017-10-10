@@ -2,9 +2,7 @@ package org.ccem.otus.survey.template;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import org.ccem.otus.survey.datasource.DataSourceDefinition;
@@ -39,24 +37,25 @@ public class SurveyTemplate {
 	}
 
 	public List<String> getCustomIdOptions() {
+		// TODO: 28/09/17 incluir questões de grid nessa lista! Utilizar método getExtractionIDs de SurveyItem
 		return itemContainer.stream().filter(item -> item instanceof CheckboxQuestion)
 				.flatMap(item -> ((CheckboxQuestion) item).options.stream()).map(option -> option.customOptionID)
 				.collect(Collectors.toList());
 	}
 
 	public Set<String> getCustomIds() {
-		// TODO: 28/09/17 incluir questões de grid nessa lista! Utilizar método getExtractionIDs de SurveyItem
 		Set<String> customIds = new HashSet<>();
 		customIds.addAll(getCustomIdItems());
 		customIds.addAll(getCustomIdOptions());
 		return customIds;
 	}
 
-	// TODO: 02/10/17 review if it will be used
-	public Set<String> getOrderedCustomIDs(){
-		Set<String> customIds = new HashSet<>();
-		itemContainer.forEach(surveyItem -> customIds.addAll(surveyItem.getItemIDs()));
-		return customIds;
+	public Map<String, String> mapTemplateAndCustomIDS(){
+		Map<String, String> templateMap = new HashMap<>();
+		itemContainer.forEach(surveyItem -> {
+			templateMap.putAll(surveyItem.mapIDS());
+		});
+		return templateMap;
 	}
 
 	public static SurveyTemplate deserialize(String surveyJson) {

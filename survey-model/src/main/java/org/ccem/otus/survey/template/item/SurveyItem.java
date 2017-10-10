@@ -1,7 +1,9 @@
 package org.ccem.otus.survey.template.item;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.ccem.otus.survey.template.enums.SurveyItemMapping;
 
@@ -19,11 +21,10 @@ public class SurveyItem {
 		return ids;
 	}
 
-	// TODO: 02/10/17 refactor
-	public List<String> getItemIDs() {
-		List<String> ids = new ArrayList<>();
-		ids.addAll(getExtractionIDs());
-		return ids;
+	public Map<String, String> mapIDS(){
+		Map<String, String> map = new HashMap<>();
+		map.put(templateID, customID);
+		return map;
 	}
 
 	public boolean isQuestion() {
