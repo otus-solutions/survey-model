@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.ccem.otus.survey.template.enums.SurveyItemMapping;
-
 public class SurveyItem {
 
 	public String extents;
@@ -25,10 +23,6 @@ public class SurveyItem {
 		Map<String, String> map = new HashMap<>();
 		map.put(templateID, customID);
 		return map;
-	}
-
-	public boolean isQuestion() {
-		return SurveyItemMapping.isQuestion(objectType);
 	}
 
 	public String getTemplateID() {
