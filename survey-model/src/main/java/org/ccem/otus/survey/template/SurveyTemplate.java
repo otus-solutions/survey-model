@@ -58,6 +58,10 @@ public class SurveyTemplate {
 		return templateMap;
 	}
 
+	public Optional<SurveyItem> findSurveyItem(String templateID){
+		return itemContainer.stream().filter(surveyItem -> surveyItem.templateID.equals(templateID)).findFirst();
+	}
+
 	public static SurveyTemplate deserialize(String surveyJson) {
 		return getGsonBuilder().create().fromJson(surveyJson, SurveyTemplate.class);
 	}
