@@ -5,7 +5,6 @@ import org.ccem.otus.survey.template.item.questions.Question;
 
 public class GridText extends Question {
 
-	public Label label;
 	public LayoutGridText layout;
 	public Label unit;
 
