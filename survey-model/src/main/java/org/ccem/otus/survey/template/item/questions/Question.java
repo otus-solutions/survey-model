@@ -12,3 +12,4 @@ public class Question extends SurveyItem {
 	public FillingRules fillingRules;
 	
 }
+	

@@ -67,5 +67,4 @@ public enum SurveyItemMapping {
 		
 		return aux;
 	}
-
 }
