@@ -6,5 +6,5 @@ import org.ccem.otus.survey.template.item.questions.numeric.unit.Unit;
 public class NumericQuestion extends Question {
 
 	public Unit unit;
-	
+
 }

@@ -1,12 +1,11 @@
 package org.ccem.otus.survey.template.item.questions.grid.integer;
 
-import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.label.Label;
+import org.ccem.otus.survey.template.item.questions.Question;
 
-public class GridInteger extends SurveyItem {
+public class GridInteger extends Question {
 	
-	public Label label;
 	public LayoutGridInteger layout;
 	public Label unit;
-	
+
 }
