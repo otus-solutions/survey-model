@@ -171,6 +171,7 @@ public class SurveyItemTest {
 		assertTrue(timeQuestionDto.label instanceof Label);
 		assertTrue(timeQuestionDto.metadata instanceof MetadataGroup);
 		assertTrue(timeQuestionDto.fillingRules instanceof FillingRules);
+		assertTrue(timeQuestionDto.options instanceof List<?>);
 	}
 	
 	@Test

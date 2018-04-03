@@ -6,6 +6,5 @@ public abstract class GenericOption {
 	@SerializedName("extends")
 	public String extents;
 	public String objectType;
-	public String name;
 	public String value;
 }
