@@ -12,7 +12,7 @@ public class OptionsItem {
 		this.options = new HashMap<String, GenericOption>();
 	}
 
-	public Map<String, GenericOption> getValidators() {
+	public Map<String, GenericOption> getOptions() {
 		return options;
 	}
 
