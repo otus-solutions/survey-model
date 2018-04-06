@@ -88,7 +88,7 @@ public enum SurveyItemTestUtils {
 			+ "\"dataType\": \"LocalTime\","
 			+ "\"label\": {},"
 			+ "\"metadata\": {},"
-			+ "\"options\": [],"
+			+ "\"options\": {},"
 			+ "\"fillingRules\": {}}"),
 	
 	

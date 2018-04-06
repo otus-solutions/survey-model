@@ -5,7 +5,6 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
-import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.label.Label;
 import org.ccem.otus.survey.template.item.miscellaneous.ImageItem;
 import org.ccem.otus.survey.template.item.miscellaneous.TextItem;
@@ -19,6 +18,7 @@ import org.ccem.otus.survey.template.item.questions.metadata.MetadataGroup;
 import org.ccem.otus.survey.template.item.questions.numeric.DecimalQuestion;
 import org.ccem.otus.survey.template.item.questions.numeric.IntegerQuestion;
 import org.ccem.otus.survey.template.item.questions.numeric.unit.Unit;
+import org.ccem.otus.survey.template.item.questions.questionOption.QuestionOption;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
 import org.ccem.otus.survey.template.item.questions.selectable.SingleSelectionQuestion;
 import org.ccem.otus.survey.template.utils.adapters.SurveyItemAdapter;
@@ -171,7 +171,7 @@ public class SurveyItemTest {
 		assertTrue(timeQuestionDto.label instanceof Label);
 		assertTrue(timeQuestionDto.metadata instanceof MetadataGroup);
 		assertTrue(timeQuestionDto.fillingRules instanceof FillingRules);
-		assertTrue(timeQuestionDto.options instanceof List<?>);
+		assertTrue(timeQuestionDto.options instanceof QuestionOption);
 	}
 	
 	@Test
