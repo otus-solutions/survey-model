@@ -89,7 +89,7 @@ public enum SurveyItemTestUtils {
 			+ "\"label\": {},"
 			+ "\"metadata\": {},"
 			+ "\"fillingRules\": {},"
-			+ "\"questionOptions\": {}}"),
+			+ "\"options\": {}}"),
 	
 	
 	PHONE_QUESTION(""

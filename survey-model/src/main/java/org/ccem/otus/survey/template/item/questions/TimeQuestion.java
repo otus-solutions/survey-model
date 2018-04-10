@@ -4,6 +4,6 @@ import org.ccem.otus.survey.template.item.questions.questionOption.QuestionOptio
 
 public class TimeQuestion extends Question {
 	
-	public QuestionOption questionOptions;
+	public QuestionOption options;
 	
 }
