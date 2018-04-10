@@ -6,5 +6,4 @@ public class QuestionOption {
 	public String objectType;
 	public OptionsItem data;
 	
-	
 }
