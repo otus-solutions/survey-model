@@ -6,17 +6,17 @@ import java.util.Map;
 import org.ccem.otus.survey.template.item.questions.questionOption.validators.GenericOption;
 
 public class OptionsItem {
-	private Map<String, GenericOption> options;
+	private Map<String, GenericOption> validators;
 
 	public OptionsItem() {
-		this.options = new HashMap<String, GenericOption>();
+		this.validators = new HashMap<String, GenericOption>();
 	}
 
 	public Map<String, GenericOption> getOptions() {
-		return options;
+		return validators;
 	}
 
-	public void addOption(String option, GenericOption genericValidator) {
-		options.put(option, genericValidator);
+	public void addOption(String option, GenericOption genericOption) {
+		validators.put(option, genericOption);
 	}
 }

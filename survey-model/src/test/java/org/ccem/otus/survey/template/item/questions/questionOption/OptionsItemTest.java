@@ -18,7 +18,7 @@ public class OptionsItemTest {
 		option = new OptionsItem();
 		genericValidator.extents = "StudioObject";
 		genericValidator.objectType = "OptionItem";
-		genericValidator.value = "true";
+//		genericValidator.value = "true";
 	}
 
 	@Test
@@ -40,7 +40,7 @@ public class OptionsItemTest {
 
 		assertEquals("StudioObject", option.getOptions().get(value).extents);
 		assertEquals("OptionItem", option.getOptions().get(value).objectType);
-		assertEquals("true", option.getOptions().get(value).value);
+//		assertEquals("true", option.getOptions().get(value).value);
 	}
 
 }
