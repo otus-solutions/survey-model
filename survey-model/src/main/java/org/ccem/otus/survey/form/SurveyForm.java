@@ -18,6 +18,7 @@ public class SurveyForm {
 	private String objectType;
 	private SurveyFormType surveyFormType;
 	private SurveyTemplate surveyTemplate;
+	private Integer version;
 
 	public SurveyForm(SurveyTemplate surveyTemplate, String userEmail) {
 		this.surveyTemplate = surveyTemplate;
@@ -51,6 +52,14 @@ public class SurveyForm {
 		return sender;
 	}
 
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
 	public static String serialize(SurveyForm survey) {
 		Gson gson = getGsonBuilder().create();
 
@@ -70,7 +79,9 @@ public class SurveyForm {
 	 * {@link org.ccem.otus.survey.template.SurveyTemplate#getGsonBuilder()}
 	 */
 	public static GsonBuilder getGsonBuilder() {
-		return SurveyTemplate.getGsonBuilder();
+		GsonBuilder builder = SurveyTemplate.getGsonBuilder();
+		builder.serializeNulls();
+		return builder;
 	}
 
 }
