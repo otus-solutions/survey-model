@@ -62,6 +62,14 @@ public class SurveyForm {
 		this.version = version;
 	}
 
+	public Boolean getDiscarded() {
+		return isDiscarded;
+	}
+
+	public void setDiscarded(Boolean discarded) {
+		isDiscarded = discarded;
+	}
+
 	public static String serialize(SurveyForm survey) {
 		Gson gson = getGsonBuilder().create();
 
