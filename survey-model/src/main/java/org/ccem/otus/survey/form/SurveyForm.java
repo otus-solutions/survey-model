@@ -19,6 +19,7 @@ public class SurveyForm {
 	private SurveyFormType surveyFormType;
 	private SurveyTemplate surveyTemplate;
 	private Integer version;
+	private Boolean isDiscarded;
 
 	public SurveyForm(SurveyTemplate surveyTemplate, String userEmail) {
 		this.surveyTemplate = surveyTemplate;
@@ -26,6 +27,7 @@ public class SurveyForm {
 		this.sendingDate = LocalDateTime.ofInstant(Instant.now(), ZoneId.of("UTC"));
 		this.surveyFormType = SurveyFormType.FORM_INTERVIEW;
 		this.objectType = SURVEY_FORM;
+		this.isDiscarded = false;
 	}
 
 	public SurveyTemplate getSurveyTemplate() {
