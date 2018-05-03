@@ -5,14 +5,18 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
 import org.ccem.otus.survey.template.SurveyTemplate;
 
 import com.google.gson.Gson;
+import org.bson.types.ObjectId;
 import com.google.gson.GsonBuilder;
 
 public class SurveyForm {
 
 	private static final String SURVEY_FORM = "SurveyForm";
+	@SerializedName("_id")
+	private ObjectId surveyID;
 	private String sender;
 	private LocalDateTime sendingDate;
 	private String objectType;
@@ -28,6 +32,14 @@ public class SurveyForm {
 		this.surveyFormType = SurveyFormType.FORM_INTERVIEW;
 		this.objectType = SURVEY_FORM;
 		this.isDiscarded = false;
+	}
+
+	public ObjectId getSurveyID() {
+		return surveyID;
+	}
+
+	public void setSurveyID(ObjectId surveyID) {
+		this.surveyID = surveyID;
 	}
 
 	public SurveyTemplate getSurveyTemplate() {
