@@ -11,6 +11,7 @@ import org.ccem.otus.survey.template.SurveyTemplate;
 import com.google.gson.Gson;
 import org.bson.types.ObjectId;
 import com.google.gson.GsonBuilder;
+import org.ccem.otus.survey.template.utils.adapters.ObjectIdToStringAdapter;
 
 public class SurveyForm {
 
@@ -102,6 +103,7 @@ public class SurveyForm {
 	 */
 	public static GsonBuilder getGsonBuilder() {
 		GsonBuilder builder = SurveyTemplate.getGsonBuilder();
+		builder.registerTypeAdapter(ObjectId.class, new ObjectIdToStringAdapter());
 		builder.serializeNulls();
 		return builder;
 	}
