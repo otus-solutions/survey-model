@@ -88,7 +88,9 @@ public enum SurveyItemTestUtils {
 			+ "\"dataType\": \"LocalTime\","
 			+ "\"label\": {},"
 			+ "\"metadata\": {},"
-			+ "\"fillingRules\": {}}"),
+			+ "\"fillingRules\": {},"
+			+ "\"options\": {}}"),
+	
 	
 	PHONE_QUESTION(""
 			+ "{\"extents\": \"SurveyItem\","

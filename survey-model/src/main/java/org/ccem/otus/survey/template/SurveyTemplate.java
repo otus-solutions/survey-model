@@ -2,13 +2,19 @@ package org.ccem.otus.survey.template;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.ccem.otus.survey.datasource.DataSourceDefinition;
 import org.ccem.otus.survey.template.identity.Identity;
 import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.questions.fillingRules.Options;
+import org.ccem.otus.survey.template.item.questions.questionOption.OptionsItem;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
 import org.ccem.otus.survey.template.metainfo.MetaInfo;
 import org.ccem.otus.survey.template.navigation.Navigation;
@@ -16,6 +22,7 @@ import org.ccem.otus.survey.template.utils.adapters.ImmutableDateAdapter;
 import org.ccem.otus.survey.template.utils.adapters.InstantAdapter;
 import org.ccem.otus.survey.template.utils.adapters.LocalDateTimeAdapter;
 import org.ccem.otus.survey.template.utils.adapters.OptionsAdapter;
+import org.ccem.otus.survey.template.utils.adapters.OptionsItemAdapter;
 import org.ccem.otus.survey.template.utils.adapters.SurveyItemAdapter;
 import org.ccem.otus.survey.template.utils.date.ImmutableDate;
 
@@ -79,6 +86,7 @@ public class SurveyTemplate {
 		GsonBuilder builder = new GsonBuilder();
 		builder.registerTypeAdapter(SurveyItem.class, new SurveyItemAdapter());
 		builder.registerTypeAdapter(Instant.class, new InstantAdapter());
+		builder.registerTypeAdapter(OptionsItem.class, new OptionsItemAdapter());
 		builder.registerTypeAdapter(Options.class, new OptionsAdapter());
 		builder.registerTypeAdapter(LocalDateTime.class, new LocalDateTimeAdapter());
 		builder.registerTypeAdapter(ImmutableDate.class, new ImmutableDateAdapter());
