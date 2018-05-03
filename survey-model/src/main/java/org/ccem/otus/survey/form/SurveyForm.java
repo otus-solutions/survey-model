@@ -21,10 +21,10 @@ public class SurveyForm {
 	private String sender;
 	private LocalDateTime sendingDate;
 	private String objectType;
-	private SurveyFormType surveyFormType;
-	private SurveyTemplate surveyTemplate;
 	private Integer version;
 	private Boolean isDiscarded;
+	private SurveyFormType surveyFormType;
+	private SurveyTemplate surveyTemplate;
 
 	public SurveyForm(SurveyTemplate surveyTemplate, String userEmail) {
 		this.surveyTemplate = surveyTemplate;
