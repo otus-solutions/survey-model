@@ -59,7 +59,8 @@ public class SurveyFormTest {
 	@Test	
 	public void should_serialize_survey_form(){
 		String expectedJson = "" +
-				"{\"sender\":\"fabiano@gmail.com\"," +
+				"{\"_id\":null," +
+				"\"sender\":\"fabiano@gmail.com\"," +
 				"\"sendingDate\":\"2017-04-04T19:07:59.457Z\"," +
 				"\"objectType\":\"SurveyForm\"," +
 				"\"surveyFormType\":\"FORM_INTERVIEW\"," +
