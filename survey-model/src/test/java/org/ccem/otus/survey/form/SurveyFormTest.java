@@ -22,8 +22,9 @@ import com.google.gson.Gson;
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(SurveyForm.class)
 public class SurveyFormTest {	
-	private SurveyForm surveyForm;	
-		
+	private SurveyForm surveyForm;
+
+
 	@Before
 	public void setUp(){
 		String json = ""
@@ -34,7 +35,8 @@ public class SurveyFormTest {
 				+ "\"metainfo\": {\"objectType\":\"SurveyMetaInfo\"},"
 				+ "\"itemContainer\": [],"
 				+ "\"navigationList\": []}";
-		
+
+
 		String timeDateInject = "2017-04-04 19:07:59.457";
 
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
@@ -56,17 +58,18 @@ public class SurveyFormTest {
 	
 	@Test	
 	public void should_serialize_survey_form(){
-		String expectedJson = "{\"sender\":\"fabiano@gmail.com\","
-							 + "\"sendingDate\":\"2017-04-04T19:07:59.457Z\","
-							 + "\"objectType\":\"SurveyForm\","
-							 + "\"surveyFormType\":\"FORM_INTERVIEW\","
-							 + "\"surveyTemplate\":{\"extents\":\"StudioObject\","
-							 + "\"objectType\":\"Survey\","
-							 + "\"oid\":\"dXNlclVVSUQ6W3VuZGVmaW5lZF1zdXJ2ZXlVVUlEOls3MDZlMTE2MC02M2I5LTExZTYtOWJjNy0xNWVhN2RkZDA4NTZdcmVwb3NpdG9yeVVVSUQ6WyBOb3QgZG9uZSB5ZXQgXQ==\","
-							 + "\"identity\":{\"name\":\"TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO\"},"
-							 + "\"metainfo\":{\"objectType\":\"SurveyMetaInfo\"},"
-							 + "\"itemContainer\":[],"
-							 + "\"navigationList\":[]}}";		
+		String expectedJson = "" +
+				"{\"_id\":null," +
+				"\"sender\":\"fabiano@gmail.com\"," +
+				"\"sendingDate\":\"2017-04-04T19:07:59.457Z\"," +
+				"\"objectType\":\"SurveyForm\"," +				
+				"\"surveyFormType\":\"FORM_INTERVIEW\"," +
+				"\"surveyTemplate\":{\"extents\":\"StudioObject\",\"objectType\":\"Survey\",\"oid\":\"dXNlclVVSUQ6W3VuZGVmaW5lZF1zdXJ2ZXlVVUlEOls3MDZlMTE2MC02M2I5LTExZTYtOWJjNy0xNWVhN2RkZDA4NTZdcmVwb3NpdG9yeVVVSUQ6WyBOb3QgZG9uZSB5ZXQgXQ==\",\"identity\":{\"extents\":null,\"objectType\":null,\"name\":\"TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO\",\"acronym\":null,\"recommendedTo\":null,\"description\":null,\"keywords\":null},\"dataSources\":null,\"metainfo\":{\"extents\":null,\"objectType\":\"SurveyMetaInfo\",\"creationDatetime\":null,\"otusStudioVersion\":null}," +
+				"\"itemContainer\":[]," +
+				"\"navigationList\":[]}," +
+				"\"version\":null," +
+				"\"isDiscarded\":false" +
+				"}";
 
 		
 		assertEquals(expectedJson, SurveyForm.serialize(surveyForm));
