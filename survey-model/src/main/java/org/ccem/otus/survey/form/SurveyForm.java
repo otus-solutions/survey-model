@@ -5,19 +5,26 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.List;
 
+import com.google.gson.annotations.SerializedName;
 import org.ccem.otus.survey.template.SurveyTemplate;
 
 import com.google.gson.Gson;
+import org.bson.types.ObjectId;
 import com.google.gson.GsonBuilder;
+import org.ccem.otus.survey.template.utils.adapters.ObjectIdToStringAdapter;
 
 public class SurveyForm {
 
 	private static final String SURVEY_FORM = "SurveyForm";
+	@SerializedName("_id")
+	private ObjectId surveyID;
 	private String sender;
 	private LocalDateTime sendingDate;
 	private String objectType;
 	private SurveyFormType surveyFormType;
 	private SurveyTemplate surveyTemplate;
+	private Integer version;
+	private Boolean isDiscarded;
 
 	public SurveyForm(SurveyTemplate surveyTemplate, String userEmail) {
 		this.surveyTemplate = surveyTemplate;
@@ -25,6 +32,15 @@ public class SurveyForm {
 		this.sendingDate = LocalDateTime.ofInstant(Instant.now(), ZoneId.of("UTC"));
 		this.surveyFormType = SurveyFormType.FORM_INTERVIEW;
 		this.objectType = SURVEY_FORM;
+		this.isDiscarded = false;
+	}
+
+	public ObjectId getSurveyID() {
+		return surveyID;
+	}
+
+	public void setSurveyID(ObjectId surveyID) {
+		this.surveyID = surveyID;
 	}
 
 	public SurveyTemplate getSurveyTemplate() {
@@ -51,6 +67,22 @@ public class SurveyForm {
 		return sender;
 	}
 
+	public Integer getVersion() {
+		return version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
+	public Boolean getDiscarded() {
+		return isDiscarded;
+	}
+
+	public void setDiscarded(Boolean discarded) {
+		isDiscarded = discarded;
+	}
+
 	public static String serialize(SurveyForm survey) {
 		Gson gson = getGsonBuilder().create();
 
@@ -70,7 +102,10 @@ public class SurveyForm {
 	 * {@link org.ccem.otus.survey.template.SurveyTemplate#getGsonBuilder()}
 	 */
 	public static GsonBuilder getGsonBuilder() {
-		return SurveyTemplate.getGsonBuilder();
+		GsonBuilder builder = SurveyTemplate.getGsonBuilder();
+		builder.registerTypeAdapter(ObjectId.class, new ObjectIdToStringAdapter());
+		builder.serializeNulls();
+		return builder;
 	}
 
 }

@@ -6,9 +6,15 @@ pipeline {
 		}
 
 	stages {
-		stage('Build Check') {
+		stage('Build Application') {
 			steps {
-				sh 'mvn -f survey-model/pom.xml install'
+				sh 'mvn -f survey-model/pom.xml clean package'
+			}
+		}
+
+		stage('Unit tests') {
+			steps {
+				sh 'mvn -f survey-model/pom.xml test'
 			}
 		}
 
