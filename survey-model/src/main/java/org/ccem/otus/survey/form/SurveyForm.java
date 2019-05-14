@@ -23,6 +23,8 @@ public class SurveyForm {
 	private String objectType;
 	private SurveyFormType surveyFormType;
 	private SurveyTemplate surveyTemplate;
+	private String name;
+	private String acronym;
 	private Integer version;
 	private Boolean isDiscarded;
 
@@ -47,6 +49,10 @@ public class SurveyForm {
 		return surveyTemplate;
 	}
 
+	public void setSurveyTemplate(SurveyTemplate surveyTemplate) {
+		this.surveyTemplate = surveyTemplate;
+	}
+
 	public LocalDateTime getSendingDate() {
 		return sendingDate;
 	}
@@ -65,6 +71,22 @@ public class SurveyForm {
 
 	public String getSender() {
 		return sender;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setAcronym(String acronym) {
+		this.acronym = acronym;
+	}
+
+	public String getAcronym() {
+		return acronym;
+	}
+
+	public String getName() {
+		return name;
 	}
 
 	public Integer getVersion() {
@@ -107,5 +129,4 @@ public class SurveyForm {
 		builder.serializeNulls();
 		return builder;
 	}
-
 }
