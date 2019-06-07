@@ -67,6 +67,8 @@ public class SurveyFormTest {
 				"\"surveyTemplate\":{\"extents\":\"StudioObject\",\"objectType\":\"Survey\",\"oid\":\"dXNlclVVSUQ6W3VuZGVmaW5lZF1zdXJ2ZXlVVUlEOls3MDZlMTE2MC02M2I5LTExZTYtOWJjNy0xNWVhN2RkZDA4NTZdcmVwb3NpdG9yeVVVSUQ6WyBOb3QgZG9uZSB5ZXQgXQ==\",\"identity\":{\"extents\":null,\"objectType\":null,\"name\":\"TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO\",\"acronym\":null,\"recommendedTo\":null,\"description\":null,\"keywords\":null},\"dataSources\":null,\"metainfo\":{\"extents\":null,\"objectType\":\"SurveyMetaInfo\",\"creationDatetime\":null,\"otusStudioVersion\":null}," +
 				"\"itemContainer\":[]," +
 				"\"navigationList\":[]}," +
+				"\"name\":null," +
+				"\"acronym\":null," +
 				"\"version\":null," +
 				"\"isDiscarded\":false" +
 				"}";
