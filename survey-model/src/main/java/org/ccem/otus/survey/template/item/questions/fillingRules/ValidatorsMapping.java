@@ -93,7 +93,6 @@ public enum ValidatorsMapping {
     if (aux == null) {
       throw new RuntimeException("Error: " + objectType + " was not found at ValidatorsMapping.");
     }
-    ;
 
     return aux;
   }
