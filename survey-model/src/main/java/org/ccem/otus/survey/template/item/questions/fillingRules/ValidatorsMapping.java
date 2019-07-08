@@ -7,6 +7,9 @@ import org.ccem.otus.survey.template.item.questions.fillingRules.validators.cale
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.calendar.MinDate;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.calendar.PastDate;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.calendar.RangeDate;
+import org.ccem.otus.survey.template.item.questions.fillingRules.validators.checkbox.MaxSelected;
+import org.ccem.otus.survey.template.item.questions.fillingRules.validators.checkbox.MinSelected;
+import org.ccem.otus.survey.template.item.questions.fillingRules.validators.checkbox.Quantity;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.decimal.Scale;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.generic.GenericValidator;
 import org.ccem.otus.survey.template.item.questions.fillingRules.validators.integer.Distinct;
@@ -55,8 +58,12 @@ public enum ValidatorsMapping {
 	
 	/* TimeQuestion */
 	MIN_TIME(MinTime.class, "minTime"),
-	MAX_TIME(MaxTime.class, "maxTime");
+	MAX_TIME(MaxTime.class, "maxTime"),
 	
+    /* CheckboxQuestion */
+	QUANTITY(Quantity.class, "quantity"),
+    MIN_SELECTED(MinSelected.class, "minSelected"),
+    MAX_SELECTED(MaxSelected.class, "maxSelected");
 	
 	private Class<? extends GenericValidator> validator;
 	private String type;
