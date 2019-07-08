@@ -28,8 +28,8 @@ import org.ccem.otus.survey.template.item.questions.fillingRules.validators.time
 
 public enum ValidatorsMapping {
 
-  Mandatory(Mandatory.class, "mandatory"), 
-  Accept(Accept.class, "accept"),
+  MANDATORY(Mandatory.class, "mandatory"), 
+  ACCEPT(Accept.class, "accept"),
 
   /* CalendarQuestion */
   PAST_DATE(PastDate.class, "pastDate"), 
