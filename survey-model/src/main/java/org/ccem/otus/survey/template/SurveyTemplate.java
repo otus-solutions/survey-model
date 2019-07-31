@@ -46,8 +46,7 @@ public class SurveyTemplate {
   }
 
   public List<String> getCustomIdOptions() {
-    // TODO: 28/09/17 incluir questões de grid nessa lista! Utilizar método
-    // getExtractionIDs de SurveyItem
+    // TODO: 28/09/17 include grid issues in this list! Use getExtractionIDs method from SurveyItem
     return itemContainer.stream().filter(item -> item instanceof CheckboxQuestion)
         .flatMap(item -> ((CheckboxQuestion) item).options.stream()).map(option -> option.customOptionID)
         .collect(Collectors.toList());
