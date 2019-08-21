@@ -17,6 +17,7 @@ import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.questions.fillingRules.Options;
 import org.ccem.otus.survey.template.item.questions.questionOption.OptionsItem;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
+import org.ccem.otus.survey.template.item.surveyItemGroup.SurveyItemGroupManager;
 import org.ccem.otus.survey.template.metainfo.MetaInfo;
 import org.ccem.otus.survey.template.navigation.Navigation;
 import org.ccem.otus.survey.template.utils.adapters.ImmutableDateAdapter;
@@ -35,9 +36,10 @@ public class SurveyTemplate {
   public String objectType;
   public String oid;
   public Identity identity;
+  public MetaInfo metainfo;
   public List<DataSourceDefinition> dataSources;
   public List<StaticVariableDefinition> staticVariableList;
-  public MetaInfo metainfo;
+  public List<SurveyItemGroupManager> surveyItemGroupManagerlist;
   public List<SurveyItem> itemContainer;
   public List<Navigation> navigationList;
 
