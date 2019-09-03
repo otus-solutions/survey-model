@@ -28,6 +28,7 @@ public class SurveyTemplateTest {
 				+ "\"objectType\": \"Survey\","
 				+ "\"oid\": \"dXNlclVVSUQ6W3VuZGVmaW5lZF1zdXJ2ZXlVVUlEOls3MDZlMTE2MC02M2I5LTExZTYtOWJjNy0xNWVhN2RkZDA4NTZdcmVwb3NpdG9yeVVVSUQ6WyBOb3QgZG9uZSB5ZXQgXQ==\","
 				+ "\"identity\": {},"
+				+ "\"staticVariableList\": [],"
 				+ "\"metainfo\": {},"
 				+ "\"itemContainer\": [],"
 				+ "\"navigationList\": []}";
@@ -43,6 +44,7 @@ public class SurveyTemplateTest {
 		
 		assertTrue(survey.identity instanceof Identity);
 		assertTrue(survey.metainfo instanceof MetaInfo);
+		assertTrue(survey.staticVariableList instanceof List<?>);
 		assertTrue(survey.itemContainer instanceof List<?>);
 		assertTrue(survey.navigationList instanceof List<?>);
 	}
