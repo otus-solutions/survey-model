@@ -6,5 +6,5 @@ public class SurveyItemGroup {
     public String objectType;
     public String start;
     public String end;
-    public List<String> members;
+    public List<SurveyItemGroupMember> members;
 }
