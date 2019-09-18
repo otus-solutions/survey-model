@@ -1,4 +1,4 @@
-package org.ccem.otus.survey.template.item.surveyItemGroup;
+package org.ccem.otus.survey.template.item.surveyitemgroup;
 
 import com.google.gson.Gson;
 import org.junit.Before;
@@ -6,7 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.modules.junit4.PowerMockRunner;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(PowerMockRunner.class)
 public class SurveyItemGroupMemberTest {

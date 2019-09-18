@@ -1,4 +1,4 @@
-package org.ccem.otus.survey.template.item.surveyItemGroup;
+package org.ccem.otus.survey.template.item.surveyitemgroup;
 
 import com.google.gson.Gson;
 import org.junit.Before;

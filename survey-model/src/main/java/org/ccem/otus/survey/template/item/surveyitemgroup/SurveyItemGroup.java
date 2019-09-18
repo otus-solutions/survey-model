@@ -1,4 +1,5 @@
-package org.ccem.otus.survey.template.item.surveyItemGroup;
+package org.ccem.otus.survey.template.item.surveyitemgroup;
+
 
 import java.util.List;
 
