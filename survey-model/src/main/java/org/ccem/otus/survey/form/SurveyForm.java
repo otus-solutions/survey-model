@@ -27,6 +27,7 @@ public class SurveyForm {
 	private String acronym;
 	private Integer version;
 	private Boolean isDiscarded;
+	private Integer externalID;
 
 	public SurveyForm(SurveyTemplate surveyTemplate, String userEmail) {
 		this.surveyTemplate = surveyTemplate;
@@ -104,6 +105,10 @@ public class SurveyForm {
 	public void setDiscarded(Boolean discarded) {
 		isDiscarded = discarded;
 	}
+
+  public Integer getExternalID() { return externalID; }
+
+  public void setExternalID(Integer externalID) { this.externalID = externalID; }
 
 	public static String serialize(SurveyForm survey) {
 		Gson gson = getGsonBuilder().create();
