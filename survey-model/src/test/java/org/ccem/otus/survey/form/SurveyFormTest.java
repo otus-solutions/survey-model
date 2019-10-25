@@ -33,8 +33,7 @@ public class SurveyFormTest {
 				+ "\"identity\": {\"name\":\"TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO\"},"
 				+ "\"metainfo\": {\"objectType\":\"SurveyMetaInfo\"},"
 				+ "\"itemContainer\": [],"
-				+ "\"navigationList\": []}";
-
+       	+ "\"navigationList\": []}";
 
 		String timeDateInject = "2017-04-04 19:07:59.457";
 
@@ -43,16 +42,12 @@ public class SurveyFormTest {
 
 		SurveyTemplate surveyTemplate = new Gson().fromJson(json, SurveyTemplate.class);
 
-
 		PowerMockito.mockStatic(LocalDateTime.class);
 		PowerMockito.when(LocalDateTime.ofInstant(Mockito.any(), Mockito.any())).thenReturn(timeSedingDateInject);
 
-
 		surveyForm = new SurveyForm(surveyTemplate, "fabiano@gmail.com");
 
-
 		Gson gson = SurveyForm.getGsonBuilder().create();
-
 	}
 
 	@Test
@@ -71,7 +66,7 @@ public class SurveyFormTest {
       "\"name\":null,\"acronym\":null," +
       "\"version\":null," +
       "\"isDiscarded\":false," +
-      "\"externalID\":null}";
+      "\"requiredExternalID\":false}";
 
 		assertEquals(expectedJson, SurveyForm.serialize(surveyForm));
 	}

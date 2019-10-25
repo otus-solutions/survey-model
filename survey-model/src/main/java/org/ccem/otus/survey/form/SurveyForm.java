@@ -27,7 +27,7 @@ public class SurveyForm {
 	private String acronym;
 	private Integer version;
 	private Boolean isDiscarded;
-	private Integer externalID;
+	private Boolean requiredExternalID;
 
 	public SurveyForm(SurveyTemplate surveyTemplate, String userEmail) {
 		this.surveyTemplate = surveyTemplate;
@@ -36,6 +36,7 @@ public class SurveyForm {
 		this.surveyFormType = SurveyFormType.FORM_INTERVIEW;
 		this.objectType = SURVEY_FORM;
 		this.isDiscarded = false;
+		this.requiredExternalID = false;
 	}
 
 	public ObjectId getSurveyID() {
@@ -106,11 +107,11 @@ public class SurveyForm {
 		isDiscarded = discarded;
 	}
 
-  public Integer getExternalID() { return externalID; }
+  public Boolean getRequiredExternalID() {return requiredExternalID;}
 
-  public void setExternalID(Integer externalID) { this.externalID = externalID; }
+  public void setRequiredExternalID(Boolean requiredExternalID) { this.requiredExternalID = requiredExternalID;}
 
-	public static String serialize(SurveyForm survey) {
+  public static String serialize(SurveyForm survey) {
 		Gson gson = getGsonBuilder().create();
 
 		return gson.toJson(survey);
