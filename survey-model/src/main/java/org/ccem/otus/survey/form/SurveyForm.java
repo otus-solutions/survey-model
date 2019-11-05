@@ -99,9 +99,7 @@ public class SurveyForm {
 		this.version = version;
 	}
 
-	public Boolean getDiscarded() {
-		return isDiscarded;
-	}
+	public Boolean getDiscarded() { return isDiscarded;	}
 
 	public void setDiscarded(Boolean discarded) {
 		isDiscarded = discarded;
