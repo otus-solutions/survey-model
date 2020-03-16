@@ -8,5 +8,6 @@ public class Rule {
 	public String operator;
 	public String answer;
 	public boolean isMetadata;
+	public boolean isCustom;
 
 }

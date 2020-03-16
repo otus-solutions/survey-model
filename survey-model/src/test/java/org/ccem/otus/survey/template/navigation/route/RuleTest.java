@@ -10,31 +10,33 @@ import org.junit.Test;
 import com.google.gson.Gson;
 
 public class RuleTest {
-	
+
 	private Rule rule;
-	
+
 	@Before
 	public void setUp() {
-		
+
 		String ruleJson = "{\"extents\": \"SurveyTemplateObject\","
 						  + "\"objectType\": \"Rule\","
 						  + "\"when\": \"CAD1\","
 						  + "\"operator\": \"equal\","
 						  + "\"answer\": 1,"
-						  + "\"isMetadata\": true}";
-		
+              + "\"isMetadata\": true,"
+						  + "\"isCustom\": true}";
+
 		rule = new Gson().fromJson(ruleJson, Rule.class);
 	}
-	
+
 	@Test
 	public void should_deserialize_correctly_Rule_Json() {
-		
+
 		assertEquals("SurveyTemplateObject", rule.extents);
 		assertEquals("Rule", rule.objectType);
 		assertEquals("CAD1", rule.when);
 		assertEquals("equal", rule.operator);
 		assertEquals("1", rule.answer);
 		assertTrue(rule.isMetadata);
+		assertTrue(rule.isCustom);
 	}
 
 }
