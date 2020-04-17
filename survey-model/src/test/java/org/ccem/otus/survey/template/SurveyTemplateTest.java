@@ -6,13 +6,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.ccem.otus.survey.template.identity.Identity;
 import org.ccem.otus.survey.template.item.SurveyItem;
-import org.ccem.otus.survey.template.item.questions.grid.GridTextQuestion;
-import org.ccem.otus.survey.template.item.questions.grid.integer.GridIntegerLine;
-import org.ccem.otus.survey.template.item.questions.grid.integer.GridIntegerQuestion;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
 import org.ccem.otus.survey.template.item.questions.selectable.options.CheckboxOption;
 import org.ccem.otus.survey.template.metainfo.MetaInfo;
@@ -132,7 +128,7 @@ public class SurveyTemplateTest {
 
   @Test
   public void getCustomIdGridTextItemMethod_should_return_list_of_customIds_by_gridText(){
-//    List<String>expectedCustomIdGridTexts = Arrays.asList("VCIDA3a", "VCIDA3b");
+    List<String>expectedCustomIdGridTexts = Arrays.asList("VCIDA3a", "VCIDA3b");
 
 //    surveyWithGridCustomIds.itemContainer
 //      .stream().forEach(item -> System.out.println(item.objectType));
@@ -140,18 +136,12 @@ public class SurveyTemplateTest {
 //    surveyWithGridCustomIds.itemContainer
 //      .stream().forEach(item -> System.out.println(((GridIntegerQuestion) item).lines));
 
-    surveyWithGridCustomIds.itemContainer
-      .stream()
-      .filter(item -> item instanceof GridTextQuestion)
-      .forEach(item -> System.out.println(item));
-
-
 //    surveyWithGridCustomIds.itemContainer
 //      .stream().filter(item -> item instanceof GridIntegerQuestion)
 //      .forEach(item -> System.out.println(((GridIntegerQuestion) item).lines));
 
 ////    System.out.println(surveyWithGridCustomIds.getGridTextCustomIds());
-//    assertEquals(expectedCustomIdGridTexts, surveyWithGridCustomIds.getGridTextCustomIds());
+    assertEquals(expectedCustomIdGridTexts, surveyWithGridCustomIds.getGridTextCustomIds());
   }
 
 

@@ -15,8 +15,8 @@ import org.ccem.otus.survey.staticVariable.StaticVariableDefinition;
 import org.ccem.otus.survey.template.identity.Identity;
 import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.questions.fillingRules.Options;
-import org.ccem.otus.survey.template.item.questions.grid.GridTextQuestion;
 import org.ccem.otus.survey.template.item.questions.grid.integer.GridIntegerQuestion;
+import org.ccem.otus.survey.template.item.questions.grid.text.GridTextQuestion;
 import org.ccem.otus.survey.template.item.questions.questionOption.OptionsItem;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
 import org.ccem.otus.survey.template.item.surveyitemgroup.SurveyItemGroup;
@@ -65,7 +65,8 @@ public class SurveyTemplate {
       .collect(Collectors.toList());
   }
 
-  public List<String> getGridTextCustomIds(){
+
+    public List<String> getGridTextCustomIds(){
     return itemContainer.stream()
       .filter(item -> item instanceof GridTextQuestion)
       .flatMap(item -> ((GridTextQuestion) item).lines.stream())
