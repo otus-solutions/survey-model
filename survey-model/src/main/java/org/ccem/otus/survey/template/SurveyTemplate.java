@@ -64,8 +64,6 @@ public class SurveyTemplate {
         .map(gridIntegerItem -> gridIntegerItem.customID))
       .collect(Collectors.toList());
   }
-
-
     public List<String> getGridTextCustomIds(){
     return itemContainer.stream()
       .filter(item -> item instanceof GridTextQuestion)
@@ -80,6 +78,7 @@ public class SurveyTemplate {
     customIds.addAll(getCustomIdItems());
     customIds.addAll(getCustomIdOptions());
     customIds.addAll(getGridIntegerCustomIds());
+    customIds.addAll(getGridTextCustomIds());
     return customIds;
   }
 
