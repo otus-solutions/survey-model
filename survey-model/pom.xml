@@ -3,7 +3,7 @@
 	<groupId>org.ccem.otus</groupId>
 	<artifactId>survey-model</artifactId>
 	<packaging>jar</packaging>
-	<version>1.11.0</version>
+	<version>1.12.0</version>
 	<name>survey-model</name>
 
   <properties>
