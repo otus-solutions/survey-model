@@ -45,6 +45,10 @@ public class SurveyTemplate {
   public List<SurveyItem> itemContainer;
   public List<Navigation> navigationList;
 
+  public List<SurveyItem> getItemContainer() {
+    return itemContainer;
+  }
+
   public List<String> getCustomIdItems() {
     return itemContainer.stream().map(item -> item.customID).collect(Collectors.toList());
   }
