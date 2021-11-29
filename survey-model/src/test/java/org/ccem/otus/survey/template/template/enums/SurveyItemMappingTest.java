@@ -5,6 +5,7 @@ import org.ccem.otus.survey.template.item.miscellaneous.ImageItem;
 import org.ccem.otus.survey.template.item.miscellaneous.TextItem;
 import org.ccem.otus.survey.template.item.questions.*;
 import org.ccem.otus.survey.template.item.questions.grid.integer.GridIntegerQuestion;
+import org.ccem.otus.survey.template.item.questions.grid.single_selection.GridSingleSelectionQuestion;
 import org.ccem.otus.survey.template.item.questions.grid.text.GridTextQuestion;
 import org.ccem.otus.survey.template.item.questions.numeric.DecimalQuestion;
 import org.ccem.otus.survey.template.item.questions.numeric.IntegerQuestion;
@@ -27,6 +28,7 @@ public class SurveyItemMappingTest {
     public static final String FILE_UPLOAD_QUESTION = "FileUploadQuestion";
     public static final String GRID_TEXT_QUESTION = "GridTextQuestion";
     public static final String GRID_INTEGER_QUESTION = "GridIntegerQuestion";
+    public static final String GRID_SINGLE_SELECTION_QUESTION = "GridSingleSelectionQuestion";
     public static final String TEXT_ITEM = "TextItem";
     public static final String IMAGE_ITEM = "ImageItem";
 
@@ -112,6 +114,13 @@ public class SurveyItemMappingTest {
         SurveyItemMapping gridTextQuestion = SurveyItemMapping.getEnumByObjectType(GRID_TEXT_QUESTION);
         assertEquals(gridTextQuestion.getItemClass(), GridTextQuestion.class);
         assertEquals(gridTextQuestion.getSurveyItemType(), GRID_TEXT_QUESTION);
+    }
+
+    @Test
+    public void method_getEnumByObjectType_should_return_grid_single_selection_question() {
+      SurveyItemMapping question = SurveyItemMapping.getEnumByObjectType(GRID_SINGLE_SELECTION_QUESTION);
+      assertEquals(GridSingleSelectionQuestion.class, question.getItemClass());
+      assertEquals(GRID_SINGLE_SELECTION_QUESTION, question.getSurveyItemType());
     }
 
     @Test
