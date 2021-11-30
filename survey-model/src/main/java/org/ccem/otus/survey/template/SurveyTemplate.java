@@ -20,7 +20,6 @@ import org.ccem.otus.survey.template.item.questions.grid.single_selection.GridSi
 import org.ccem.otus.survey.template.item.questions.grid.text.GridTextQuestion;
 import org.ccem.otus.survey.template.item.questions.questionOption.OptionsItem;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
-import org.ccem.otus.survey.template.item.questions.selectable.SingleSelectionQuestion;
 import org.ccem.otus.survey.template.item.surveyitemgroup.SurveyItemGroup;
 import org.ccem.otus.survey.template.metainfo.MetaInfo;
 import org.ccem.otus.survey.template.navigation.Navigation;
@@ -79,8 +78,7 @@ public class SurveyTemplate {
     return itemContainer.stream()
       .filter(GridSingleSelectionQuestion.class::isInstance)
       .flatMap(
-        grid -> ((GridSingleSelectionQuestion) grid)
-          .items
+        grid -> ((GridSingleSelectionQuestion) grid).items
           .stream()
           .map(question -> question.customID)
       )
