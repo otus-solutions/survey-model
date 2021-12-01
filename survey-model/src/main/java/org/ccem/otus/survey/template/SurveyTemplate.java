@@ -16,6 +16,7 @@ import org.ccem.otus.survey.template.identity.Identity;
 import org.ccem.otus.survey.template.item.SurveyItem;
 import org.ccem.otus.survey.template.item.questions.fillingRules.Options;
 import org.ccem.otus.survey.template.item.questions.grid.integer.GridIntegerQuestion;
+import org.ccem.otus.survey.template.item.questions.grid.single_selection.GridSingleSelectionQuestion;
 import org.ccem.otus.survey.template.item.questions.grid.text.GridTextQuestion;
 import org.ccem.otus.survey.template.item.questions.questionOption.OptionsItem;
 import org.ccem.otus.survey.template.item.questions.selectable.CheckboxQuestion;
@@ -73,12 +74,24 @@ public class SurveyTemplate {
       .collect(Collectors.toList());
   }
 
+  public List<String> getGridSingleSelectionCustomIds() {
+    return itemContainer.stream()
+      .filter(GridSingleSelectionQuestion.class::isInstance)
+      .flatMap(
+        grid -> ((GridSingleSelectionQuestion) grid).items
+          .stream()
+          .map(question -> question.customID)
+      )
+      .collect(Collectors.toList());
+  }
+
   public Set<String> getCustomIds() {
     Set<String> customIds = new HashSet<>();
     customIds.addAll(getCustomIdItems());
     customIds.addAll(getCustomIdOptions());
     customIds.addAll(getGridIntegerCustomIds());
     customIds.addAll(getGridTextCustomIds());
+    customIds.addAll(getGridSingleSelectionCustomIds());
     return customIds;
   }
 
